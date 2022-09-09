@@ -39,7 +39,9 @@ body, html{
     background: rgb(0, 70, 24);
 
     a{
-        @include arabicFont(30px, white);
+        @include arabicFont(20px, white);
+        display: flex;
+        align-items: center;
 
         padding: 15px 10px;
     }
@@ -47,6 +49,8 @@ body, html{
     .btn{
         display: flex;
         flex-direction: row-reverse;
+
+        align-items: center;
 
         padding: 15px 10px;
     }
@@ -59,9 +63,34 @@ body, html{
 
     background: $color1;
 
-    @include arabicFont(25px, white);
+    @include arabicFont(13px, white);
 
     a{
         padding: 8px 8px;
+    }
+}
+
+.chats{
+    .chat{
+        @include arabicFont(13px, white);
+
+        display: flex;
+        
+        flex-direction: row-reverse;
+
+        justify-content: right;
+        
+        padding: 8px 3px;
+        img{
+            border-radius: 50%;
+        }
+        .txt{
+            direction: rtl;
+
+            padding: 10px;
+            .mesg{
+                @include arabicFont(11px, white)
+            }
+        }
     }
 }
